@@ -3,11 +3,11 @@
  * more_numbers - function
  */
 void more_numbers(void)
+{
 	int n = 48;
 	int l = 0;
 	int reset = 0;
 
-#include "main.h"
 	while (l < 10)
 	{
 		while (n <= 62)
