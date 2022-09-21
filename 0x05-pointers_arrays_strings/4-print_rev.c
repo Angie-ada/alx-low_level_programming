@@ -2,8 +2,8 @@
 /**
  * print_rev - function
  *
- */
  * @s: pointer of parameter
+ */
 void print_rev(char *s)
 {
 	int length = 0;
