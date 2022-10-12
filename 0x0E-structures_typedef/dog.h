@@ -1,15 +1,27 @@
-#include "dog.h"
-#include <stdlib.h>
+#ifndef HEADER_FILE
+#define HEADER_FILE
 /**
- * free_dog - frees memory allocated for a struct dog
- * @d: struct dog to free
+ * struct dog - Create the structure dog
+ *
+ * @name: First member
+ * @age: Second member
+ * @owner: Third member
+ *
+ * Description: Create the structure dog
  */
-void free_dog(dog_t *d)
+struct dog
 {
-	if (d)
-	{
-		free(d->owner);
-		free(d->name);
-		free(d);
-	}
-}
+	char *name;
+	float age;
+	char *owner;
+};
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+
+typedef struct dog dog_t;
+
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif
